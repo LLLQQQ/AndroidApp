@@ -2,6 +2,7 @@ package com.example.administrator.a20161104test2;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -22,12 +23,25 @@ import java.io.OutputStreamWriter;
 public class MainActivity extends AppCompatActivity {
 
     private EditText edit;
+    private Button saveData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        saveData = (Button) findViewById(R.id.save_data);
+        saveData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = getSharedPreferences("dataSP",
+                        MODE_PRIVATE).edit();
+                editor.putString("name", "Tom");
+                editor.putInt("age", 28);
+                editor.putBoolean("married", false);
+                editor.commit();//提交
+            }
+        });
         edit = (EditText) findViewById(R.id.edit);
         String inputText = load();
         if (!TextUtils.isEmpty(inputText)) {
