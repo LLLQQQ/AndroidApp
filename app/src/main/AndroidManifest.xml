@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".SecondActivity"></activity>
         <activity android:name=".ThirdActivity"></activity>
+        <activity android:name=".ContactsTest"></activity>
     </application>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
 </manifest>
