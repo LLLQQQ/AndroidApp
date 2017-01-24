@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Button 1" />
+        android:text="Button 1 TO 2nd page" />
 
     <Button
         android:id="@+id/button2"
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="Button 2" />
+        android:text="Button 2 TO 3rd page" />
 
 
     <Button
