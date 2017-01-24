@@ -26,7 +26,7 @@ public class ThirdActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.third_layout);
 //        dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
-        dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 2);
+        dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 3);
         Button createDatabase = (Button) findViewById(R.id.create_database);
         createDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
