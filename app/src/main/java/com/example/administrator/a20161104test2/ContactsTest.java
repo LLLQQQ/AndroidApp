@@ -50,7 +50,7 @@ public class ContactsTest extends Activity {
             e.printStackTrace();
         } finally {
             if (cursor != null) {
-                cursor.close();
+                cursor.close();//test
             }
         }
     }
