@@ -18,6 +18,11 @@
         <activity android:name=".SecondActivity"></activity>
         <activity android:name=".ThirdActivity"></activity>
         <activity android:name=".ContactsTest"></activity>
+
+        <provider
+            android:name="com.example.administrator.a20161104test2.DatabaseProvider"
+            android:authorities="com.example.administrator.a20161104test2.provider"
+            android:exported="true"></provider>
     </application>
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
