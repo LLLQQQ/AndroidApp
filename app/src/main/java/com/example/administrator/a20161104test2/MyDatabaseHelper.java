@@ -11,7 +11,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "author text, "
             + "price real, "
             + "pages integer, "
-            + "name text)"
+            + "name text"//+ "name text)";是错的，多了个括号
             + "category_id integer)";
     public static final String CREATE_CATEGORY = "create table Category ("
             + "id integer primary key autoincrement, "
@@ -28,8 +28,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_BOOK);
-        db.execSQL(CREATE_CATEGORY);
-//        Toast.makeText(mContext, "Create succeeded", Toast.LENGTH_SHORT).show();
+//        db.execSQL(CREATE_CATEGORY);
+        Toast.makeText(mContext, "Create succeeded", Toast.LENGTH_SHORT).show();
     }
 
     @Override
